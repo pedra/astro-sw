@@ -1,0 +1,27 @@
+{
+	"name": "astro-sw",
+	"version": "1.0.0",
+	"description": "Astro Service Worker in vanilla Javascript",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pedra/astro-sw.git"
+	},
+	"keywords": [
+		"astro-integration",
+		"performance",
+		"optimization",
+		"astro-sw",
+		"service-worker",
+		"sw"
+	],
+	"author": "BillRocha < prbr@ymail.com >",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/pedra/astro-sw/issues"
+	},
+	"homepage": "https://github.com/pedra/astro-sw#readme"
+}
