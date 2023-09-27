@@ -1,3 +1,5 @@
+<img align="right" src="https://billrocha.netlify.app/Handmade.png" alt="Hand Made">
+
 # astro-sw
 Astro Service Worker in vanilla Javascript
 
@@ -58,3 +60,9 @@ In "production" mode, after the build, ASSETS will be AUTOMATICALLY populated wi
 ### TODO:
 
 In the next versions support for Workbox will be added.
+
+---
+
+## License
+
+[MIT](https://mit-license.org) © [Bill Rocha](https://billrocha.netlify.com)
