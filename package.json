@@ -1,6 +1,6 @@
 {
 	"name": "astro-sw",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Astro Service Worker in vanilla Javascript",
 	"main": "index.js",
 	"scripts": {
@@ -23,5 +23,10 @@
 	"bugs": {
 		"url": "https://github.com/pedra/astro-sw/issues"
 	},
-	"homepage": "https://github.com/pedra/astro-sw#readme"
+	"homepage": "https://github.com/pedra/astro-sw#readme",
+	"dependencies": {
+		"@types/uglify-js": "^3.17.2",
+		"javascript-obfuscator": "^4.1.0",
+		"uglify-js": "^3.17.4"
+	}
 }
