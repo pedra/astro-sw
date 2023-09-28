@@ -3,7 +3,13 @@
 # astro-sw
 Astro Service Worker in vanilla Javascript
 
-### SAMPLE SERVICE WORKER !!
+### Installation
+
+```
+npx astro add astro-sw
+```
+
+### Getting started
 	
 Create a directory to contain your Service Worker files at path: "./src/sw/".
 	
@@ -59,7 +65,11 @@ In "production" mode, after the build, ASSETS will be AUTOMATICALLY populated wi
 
 ### TODO:
 
-In the next versions support for Workbox will be added.
+Workbox support will be added soon.
+
+### Collaborators
+
+If you are interested in collaborating with the development of this extension, you are **very welcome**!
 
 ---
 
