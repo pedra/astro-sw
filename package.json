@@ -1,11 +1,8 @@
 {
 	"name": "astro-sw",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Astro Service Worker in vanilla Javascript",
 	"main": "index.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/pedra/astro-sw.git"
@@ -16,7 +13,8 @@
 		"optimization",
 		"astro-sw",
 		"service-worker",
-		"sw"
+		"sw",
+		"service worker"
 	],
 	"author": "BillRocha < prbr@ymail.com >",
 	"license": "MIT",
