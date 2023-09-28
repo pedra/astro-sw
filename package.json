@@ -2,7 +2,7 @@
 	"name": "astro-sw",
 	"version": "1.0.1",
 	"description": "Astro Service Worker in vanilla Javascript",
-	"main": "index.js",
+	"main": "index.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
