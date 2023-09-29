@@ -1,7 +1,7 @@
 <img align="right" src="https://billrocha.netlify.app/Handmade.png" alt="Hand Made">
 
 # Astro-sw
-Astro Service Worker for plain (vanilla) Javascript files.
+Astro Service Worker integration for plain (vanilla) Javascript files.
 
 ## Installation
 
