@@ -1,7 +1,7 @@
 {
 	"name": "astro-sw",
 	"version": "1.0.2",
-	"description": "Astro Service Worker in vanilla Javascript",
+	"description": "Astro Service Worker for plain (vanilla) Javascript files.",
 	"main": "index.ts",
 	"repository": {
 		"type": "git",
