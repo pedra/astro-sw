@@ -1,0 +1,22 @@
+---
+import site from "@data/site.json";
+---
+
+<footer>
+  <div class="container">
+    <p>&copy; 2023 NotFlix⚡</p>
+  </div>
+</footer>
+
+<div class="splash on" id="splash">
+  <div class="loader on">
+    <h2>How about a cookie?</h2>
+    <div class="control">
+      <button class="btn-primary">I want!</button>
+      <button class="btn-flat">I prefer to visit Pixabay</button>
+    </div>
+    <div class="hide">
+      <img src={site.loader.src} alt={site.loader.alt} />
+    </div>
+  </div>
+</div>

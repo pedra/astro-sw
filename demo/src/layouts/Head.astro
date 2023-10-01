@@ -1,0 +1,43 @@
+---
+// component imports
+import Seo from "@components/Seo.astro";
+
+const { title, description, image, data, robots } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/icon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/icon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/icon/favicon-16x16.png"
+  />
+  <link rel="manifest" href="/icon/site.webmanifest" />
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#98138e" />
+  <link rel="shortcut icon" href="/icon/favicon.ico" />
+
+  <meta name="apple-mobile-web-app-title" content="NotFlix⚡" />
+  <meta name="application-name" content="NotFlix⚡" />
+  <meta name="msapplication-TileColor" content="#98138e" />
+  <meta name="msapplication-config" content="/icon/browserconfig.xml" />
+  <meta name="theme-color" content="#98138e" />
+
+  <Seo {title} {description} url={Astro.url} {image} {data} {robots} />
+</head>

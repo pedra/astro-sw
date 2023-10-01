@@ -1,0 +1,58 @@
+:root {
+	--text: #ffffff;
+	--back: #000000;
+
+	--btn-primary-1: #596400;
+	--btn-primary-2: #454e00;
+	--btn-primary-color: #ffffff;
+
+	--btn-secondary-1: #993d00;
+	--btn-secondary-2: #bd4b00;
+	--btn-secondary-color: #ffffff;
+
+	--btn-flat-1: #2c2c2c;
+	--btn-flat-2: #1f1e1e;
+	--btn-flat-color: #ffffff;
+}
+
+button.btn-primary,
+button.btn-secondary,
+button.btn-flat {
+	cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	padding: .7rem 2rem;
+}
+
+button.btn-primary {
+	color: var(--btn-primary-color);
+	background-image: linear-gradient(to bottom, var(--btn-primary-1), var(--btn-primary-2));
+}
+
+button.btn-secondary {
+	color: var(--btn-secondary-color);
+	background-image: linear-gradient(to bottom, var(--btn-secondary-1), var(--btn-secondary-2));
+}
+
+button.btn-flat {
+	color: var(--btn-flat-color);
+	background-image: linear-gradient(to bottom, var(--btn-flat-1), var(--btn-flat-2));
+}
+
+body.dark {
+	background-color: #000;
+	color: #ffffff;
+}
+
+body.dark .glr-item {
+	box-shadow: 0 0 60px #ffffff40;
+}
+
+body.dark .glr-item:hover {
+	box-shadow: 0 15px 120px 40px rgba(255, 255, 255, 0.5);
+}
+
+body.dark .glr-item:hover .glr-content {
+	box-shadow: 0 15px 120px 40px rgba(255, 255, 255, 0.5);
+}

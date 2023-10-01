@@ -1,0 +1,35 @@
+---
+// component import
+import Head from "./Head.astro";
+import site from "@data/site.json";
+
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Stage from "@components/Stage/Stage.astro";
+import Shop from "@components/Shop/Shop.astro";
+import Utils from "@components/Utils/Utils.astro";
+
+// style import
+import "./styles/style.css";
+
+const {
+  title = site.title,
+  description = site.description,
+  image,
+  data,
+  robots,
+} = Astro.props;
+---
+
+<html lang="en">
+  <Head {title} {description} {image} {data} {robots} />
+  <body class="home dark">
+    <Header />
+    <main>
+      <Stage />
+      <Shop />
+    </main>
+    <Footer />
+    <Utils />
+  </body><script src="./scripts/app.js"></script>
+</html>

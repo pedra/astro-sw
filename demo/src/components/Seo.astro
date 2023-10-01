@@ -1,0 +1,42 @@
+---
+import site from "@data/site.json";
+
+const {
+  title,
+  description,
+  url = Astro.url,
+  image,
+  data,
+  robots,
+} = Astro.props;
+---
+
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content={title} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={image?.src || site.image.src} />
+<meta property="og:image:url" content={image?.src || site.image.src} />
+<meta property="og:image:secure_url" content={image?.src || site.image.src} />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content={site.image?.width} />
+<meta property="og:image:height" content={site.image?.height} />
+<meta property="og:image:alt" content={image?.alt || site.image.alt} />
+
+<!-- Twitter -->
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={image?.src || site.image.src} />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:domain" content={site.link.twitter} />
+
+<!-- Social -->
+<meta name="facebook:domain" content={site.link.facebook} />
+<meta name="youtube:domain" content={site.link.youtube} />
+
+{robots && <meta name="robots" content="noindex, nofollow" />}

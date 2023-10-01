@@ -1,0 +1,23 @@
+{
+	"title": "NotFlix⚡",
+	"description": "NotFlix⚡ - Astro-sw integration demo application",
+	"logo": {
+		"src": "/icon/android-chrome-192x192.png",
+		"alt": "logo"
+	},
+	"loader": {
+		"src": "/img/l.gif",
+		"alt": "loader"
+	},
+	"image": {
+		"src": "/img/og.jpg",
+		"alt": "NotFlix",
+		"width": "1200",
+		"height": "600"
+	},
+	"link": {
+		"facebook": "https://www.facebook.com",
+		"youtube": "https://www.youtube.com",
+		"twitter": "https://twitter.com"
+	}
+}

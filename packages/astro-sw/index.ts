@@ -1,11 +1,10 @@
-import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from "node:fs"
-import { readFile } from "node:fs/promises"
-import { join, resolve, dirname, basename, extname } from "node:path"
-import { fileURLToPath } from "node:url"
+import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs'
+import { join, resolve, extname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { obfuscate } from 'javascript-obfuscator'
 import { minify } from 'uglify-js'
 
-const PluginName: string = 'Astrojs-sw'
+const PluginName: string = 'Astro-sw'
 
 export type TConfig = {
 	dir: string
@@ -43,11 +42,11 @@ const conf: TConfig = {
 	mode: 'dev'
 }
 
-export function getConfig() : TConfig {
+export function getConfig(): TConfig {
 	return conf
 }
 
-function init( cfg: TSWConfig, outDir: string, publicDir: string, mode: string ) : void {
+function init(cfg: TSWConfig, outDir: string, publicDir: string, mode: string): void {
 	conf.dir = resolve(undefined !== cfg.dir ? cfg.dir : conf.dir)
 
 	if (undefined !== cfg.order) conf.order = cfg.order
@@ -70,12 +69,12 @@ function init( cfg: TSWConfig, outDir: string, publicDir: string, mode: string )
  * 3. Concatenate the "parts" files (dir = './src/sw' by default)
  * 4. Save to ./public/sw.js (filename = 'sw.js' by default)
  */
-function createSw() : void {
+function createSw(): void {
 	const out: string = createCache() + createAssets() + getSwContent()
 	writeFileSync(join(conf.publicDir, conf.filename), out)
 }
 
-function getSwContent() : string {
+function getSwContent(): string {
 	const files: string[] = conf.order.length > 0 ? conf.order : treeFiles(conf.dir, conf.dir, '.js')
 
 	// Fallback to sw_sample.js 😱
@@ -89,20 +88,20 @@ function getSwContent() : string {
 	files.map(f => {
 		const pf: string = join(conf.dir, f.split('.').pop() == 'js' ? f : f + '.js')
 		if (!existsSync(pf)) throw new Error(`[astrojs-sw] ERROR: File "${pf}" not found`)
-		out += (conf.mode == 'dev' ? `\n/*\n\t${PluginName}\n\tFile: ${pf}\n*/\n` : '' ) + 
+		out += (conf.mode == 'dev' ? `\n/*\n\t${PluginName}\n\tFile: ${pf}\n*/\n` : '') +
 			`${readFileSync(pf).toString()}\n`
 	})
 	return out
 }
 
-function createCache() : string {
+function createCache(): string {
 	return conf.auto === false ? '' :
 		`const CACHE='cache-${new Date().getTime()}${conf.mode == 'build' ? '-pro' : '-dev'}';\n`
 }
 
 
 // Build functions ---------------------------------------------------------------------------------------
-function createAssets() : string {
+function createAssets(): string {
 	let out: string = 'const ASSETS=['
 	if (conf.mode == 'dev') return out + '];\n'
 
@@ -114,14 +113,14 @@ function createAssets() : string {
 }
 
 // Scan the build directory (./dist)
-function treeFiles (
-		dir: string,
-		removeDir: string = '',
-		ext: boolean | string = false,
-		depth: number = 1000
-	) : string[] {
+function treeFiles(
+	dir: string,
+	removeDir: string = '',
+	ext: boolean | string = false,
+	depth: number = 1000
+): string[] {
 
-	if (depth < 1) return
+	if (depth < 1) return []
 	const list: string[] = []
 
 	existsSync(dir) && readdirSync(dir).forEach((file: string) => {
@@ -144,7 +143,7 @@ function treeFiles (
  * 3. Concatenate the "part" files
  * 4. Save to "./dist/sw.js" (filename = 'sw.js' by default)
  */
-function buildSw() : void {
+function buildSw(): void {
 	let out: string = createCache() + createAssets() + getSwContent()
 
 	if (conf.obfuscate !== false) out = obfuscate(out).getObfuscatedCode()
@@ -154,7 +153,7 @@ function buildSw() : void {
 }
 
 // Astro "createPlugin" ----------------------------------------------------------------------------------
-function createPlugin(swConfig: TSWConfig = {}) : any {
+function createPlugin(swConfig: TSWConfig = {}): any {
 	return ({
 		name: PluginName,
 		hooks: {

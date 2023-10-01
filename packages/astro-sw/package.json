@@ -1,0 +1,40 @@
+{
+	"name": "astro-sw",
+	"version": "1.0.3",
+	"description": "Astro Service Worker for plain (vanilla) Javascript files.",
+	"type": "module",
+	"main": "index.ts",
+	"exports": {
+		".": "./index.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pedra/astro-sw.git"
+	},
+	"bugs": {
+		"url": "https://github.com/pedra/astro-sw/issues"
+	},
+	"homepage": "https://github.com/pedra/astro-sw#readme",
+	"keywords": [
+		"withastro",
+		"astro-component",
+		"astro-integration",
+		"performance",
+		"optimization",
+		"astro-sw",
+		"service-worker",
+		"sw",
+		"service worker"
+	],
+	"author": {
+		"name": "Bill Rocha",
+		"email": "prbr@ymail.com",
+		"url": "https://billrocha.com"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@types/uglify-js": "^3.17.2",
+		"javascript-obfuscator": "^4.1.0",
+		"uglify-js": "^3.17.4"
+	}
+}
