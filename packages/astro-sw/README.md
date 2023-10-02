@@ -91,7 +91,7 @@ Please, if you find bugs or if you have suggestions for improvements and additio
 ## TODO:
 
 - [ ] Add WorkBox support.
-- [ ] Create a "use example" application.
+- [x] Create a "use example" application. ✔
 - [ ] Create a video tutorial to answer all your questions with:
 	- Use of CACHE in browsers
 	- Controlled Fetch
