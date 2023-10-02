@@ -1,48 +1,38 @@
 self.addEventListener('push', (event) => {
 	event.waitUntil(
 		self.clients.matchAll().then((clientList) => {
-			console.log(
-				`[SWORKER push] Push had this data: "${event.data.text()}"`,
-			)
+			console.log(`[SWORKER push] Push had this data: "${event.data.text()}"`)
 
-			var focused = clientList.some((client) => {
-				client.postMessage({ msg: event.data.json(), type: 'push' })
+			const data = event.data.json()
+
+			const title = data.title ?? 'Error'
+			const options = {
+				body: data.body ?? 'New message from the server!',
+				icon: data.icon ?? '/icon/android-chrome-192x192.png',
+				badge: data.badge ?? '/icon/favicon-32x32.png',
+				image: data.image ?? '/img/og.jpg',
+				vibrate: data.vibrate ?? [],
+				data: data.data ?? {}
+			}
+
+			// Focus ...
+			const focused = clientList.some((client) => {
+				client.postMessage({ msg: data, type: 'push' })
 				return client.focused
 			})
 
-			var msg = {
-				title: 'error',
-				body: 'Ocorreu um erro no envio de notificação!',
-			}
-			try {
-				msg = event.data.json()
-			} finally { /* empty */ }
-
-			// Focus ...
 			if (focused) {
-				msg.body += "You're still here, thanks!"
+				// create an action for "focused" on the next line
+				options.body += " [focused]"
 			} else if (clientList.length > 0) {
-				msg.body +=
-					"You haven't closed the page, click here to focus it!"
+				// create an action for "not focused" on the next line
+				options.body += " [no focused]"
 			} else {
-				msg.body +=
-					'You have closed the page, click here to re-open it!'
-			}
-
-			const title = msg.title
-			const options = {
-				body: msg.body || 'New message from the server',
-				icon: msg.icon || '/icon/android-chrome-192x192.png',
-				badge: msg.badge || '/icon/favicon-32x32.png',
-				image: msg.image || '/img/og.jpg',
-				vibrate: msg.vibrate || [],
-				data: JSON.parse(
-					'undefined' == typeof msg['data'] ? false : msg['data'],
-				),
+				// create an action for "closed" on the next line
+				options.body += " [closed]"
 			}
 
 			return self.registration.showNotification(title, options)
 		}),
 	)
 })
-
