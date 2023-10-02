@@ -95,10 +95,9 @@ Please, if you find bugs or if you have suggestions for improvements and additio
 	- Background sync
 	- etc.
 
----
-
 ## License
 
 [MIT](https://mit-license.org) © [Bill Rocha](https://billrocha.netlify.com)
 
+---
 _This software was written by human hands.._ <img align="left" src="https://billrocha.netlify.app/handmade_32.png" alt="Hand Made">
