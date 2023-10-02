@@ -88,6 +88,7 @@ Please, if you find bugs or if you have suggestions for improvements and additio
 
 - [ ] Add WorkBox support.
 - [x] Create a demo application (see the "[demo](https://github.com/pedra/astro-sw/tree/main/demo)" directory). ✔
+- [x] Short [video](https://youtu.be/oOn-HDZxdY4) for quick demonstration. ✔
 - [ ] Create a video tutorial to answer all your questions with:
 	- Use of CACHE in browsers
 	- Controlled Fetch
