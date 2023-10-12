@@ -8,6 +8,7 @@ This demo application was created with a “clean” version of **Astro** to dem
 
 It is a video site that uses **Pixabay** and, because it is videos, has a high network consumption. The issue is alleviated with the service worker intercepting the loading of images and videos from Pixabay, writing them to the browser cache. The next accesses will therefore be made locally without consuming the network.
 
+> See this demo running at https://astrosw-demo.netlify.app 
 > Watch this [short video](https://youtu.be/oOn-HDZxdY4) that shows the **astro-sw** plugin in action.
 
 ## Installation
