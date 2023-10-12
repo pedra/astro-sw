@@ -1,6 +1,6 @@
 {
 	"name": "astro-sw",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Astro Service Worker for plain (vanilla) Javascript files.",
 	"type": "module",
 	"main": "index.ts",
@@ -32,8 +32,10 @@
 		"url": "https://billrocha.com"
 	},
 	"license": "MIT",
+	"devDependencies": {
+		"@types/uglify-js": "^3.17.2"
+	},
 	"dependencies": {
-		"@types/uglify-js": "^3.17.2",
 		"javascript-obfuscator": "^4.1.0",
 		"uglify-js": "^3.17.4"
 	}

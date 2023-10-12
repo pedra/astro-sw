@@ -3,6 +3,8 @@
 # Astro-sw
 Astro Service Worker integration for plain (vanilla) Javascript files.
 
+--- See the [demo](https://github.com/pedra/astro-sw/tree/main/demo) running at https://astrosw-demo.netlify.app and [here](https://youtu.be/oOn-HDZxdY4) !
+
 ## Installation
 
 ```
