@@ -45,6 +45,6 @@ Feel free to check out [Astro.build](https://astro.build), the [documentation](h
 
 ## License
 
-[MIT](https://mit-license.org) © [Bill Rocha](https://billrocha.netlify.com)
+[MIT](https://mit-license.org) © [Bill Rocha](https://billrocha.netlify.app)
 
 _This software was written by human hands.._ <img align="left" src="https://billrocha.netlify.app/handmade_32.png" alt="Hand Made">
