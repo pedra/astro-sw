@@ -1,8 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs'
 import { join, resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import pkg from 'javascript-obfuscator'
-const { obfuscate } = pkg
+import obfuscate from 'javascript-obfuscator'
 import { minify } from 'uglify-js'
 
 const PluginName: string = 'Astro-sw'
