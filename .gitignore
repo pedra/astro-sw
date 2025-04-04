@@ -132,3 +132,6 @@ demo/public/sw.js
 
 # Local Netlify folder
 .netlify
+
+# NPM Token
+.npmrc
