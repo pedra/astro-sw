@@ -1,4 +1,4 @@
-// version: 1.0.3
+// version: 1.0.5
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs'
 import { join, resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
