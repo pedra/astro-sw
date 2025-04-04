@@ -1,6 +1,6 @@
 {
 	"name": "astro-sw",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Astro Service Worker for plain (vanilla) Javascript files.",
 	"type": "module",
 	"main": "index.ts",
